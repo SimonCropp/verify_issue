@@ -30,6 +30,7 @@ public class Tests
         {
             settings.DefaultValueHandling = DefaultValueHandling.Include;
 
+            // this should no be considered a supported approach. but it does work
             var resolver = (DefaultContractResolver) settings.ContractResolver!;
             resolver.NamingStrategy = new CamelCaseNamingStrategy
             {
